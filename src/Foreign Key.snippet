@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone" />
+    <_locTag _loc="locData">Title</_locTag>
+    <_locTag _loc="locData">Description</_locTag>
+    <_locTag _loc="locData">Author</_locTag>
+    <_locTag _loc="locData">ToolTip</_locTag>
+  </_locDefinition>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+    <Title>Foreign Key</Title>
+    <Shortcut></Shortcut>
+    <Description>Creates new Foreign Key</Description>
+    <Author>Oleksandr Desiatnyk</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>schema1</ID>
+          <ToolTip>Source table schema</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>table1</ID>
+          <ToolTip>Source table</ToolTip>
+          <Default>table1</Default>
+        </Literal>
+        <Literal>
+          <ID>column1</ID>
+          <ToolTip>Source table ref column</ToolTip>
+          <Default>idColumn</Default>
+        </Literal>
+        <Literal>
+          <ID>schema2</ID>
+          <ToolTip>Target table schema</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>table2</ID>
+          <ToolTip>Target table</ToolTip>
+          <Default>table2</Default>
+        </Literal>
+        <Literal>
+          <ID>column2</ID>
+          <ToolTip>Target table ref column</ToolTip>
+          <Default>idColumn</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL">
+        <![CDATA[ALTER TABLE $schema1$.$table1$ WITH CHECK ADD CONSTRAINT FK_$table1$_$column1$_To_$table2$ FOREIGN KEY ($column1$)
+REFERENCES $schema2$.$table2$ ($column2$)
+GO
+
+ALTER TABLE $schema1$.$table1$ CHECK CONSTRAINT FK_$table1$_$column1$_To_$table2$
+GO
+
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
