@@ -5,5 +5,8 @@ This repository contains set of some useful frueqently used T-SQL statements tha
 ## Available Snippets
 TBD
 
+## Creating Your Own Snippets
+TBD
+
 ## Installation
 TBD

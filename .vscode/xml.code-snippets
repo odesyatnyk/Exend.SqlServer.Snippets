@@ -1,0 +1,55 @@
+{
+  "new-snippet": {
+    "scope": "xml",
+    "prefix": "new-snippet",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\" ?>",
+      "<CodeSnippets xmlns=\"http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet\">",
+      "\t<_locDefinition xmlns=\"urn:locstudio\">",
+      "\t\t<_locDefault _loc=\"locNone\" />",
+      "\t\t<_locTag _loc=\"locData\">Title</_locTag>",
+      "\t\t<_locTag _loc=\"locData\">Description</_locTag>",
+      "\t\t<_locTag _loc=\"locData\">Author</_locTag>",
+      "\t\t<_locTag _loc=\"locData\">ToolTip</_locTag>",
+      "\t</_locDefinition>",
+      "\t<CodeSnippet Format=\"1.0.0\">",
+      "\t\t<Header>",
+      "\t\t<Title>$TM_FILENAME_BASE</Title>",
+      "\t\t<Shortcut></Shortcut>",
+      "\t\t<Description>${2:description}</Description>",
+      "\t\t<Author>Oleksandr Desiatnyk</Author>",
+      "\t\t<SnippetTypes>",
+      "\t\t\t<SnippetType>Expansion</SnippetType>",
+      "\t\t</SnippetTypes>",
+      "\t\t</Header>",
+      "\t\t<Snippet>",
+      "\t\t\t<Declarations>",
+      "\t\t\t\t<Literal>",
+      "\t\t\t\t\t<ID>${3:id}</ID>",
+      "\t\t\t\t\t<ToolTip>${4:tooltip}</ToolTip>",
+      "\t\t\t\t\t<Default>${5:value}</Default>",
+      "\t\t\t\t</Literal>",
+      "\t\t\t</Declarations>",
+      "\t\t\t<Code Language=\"SQL\">",
+      "\t\t\t\t<![CDATA[${6:statement}",
+      ");$end$]]>",
+      "\t\t\t</Code>",
+      "\t\t</Snippet>",
+      "\t</CodeSnippet>",
+      "</CodeSnippets>"
+    ],
+    "description": "Creates a new SSMS T-SQL snippet body"
+	},
+	"new-literal": {
+		"scope": "xml",
+		"prefix": "new-literal",
+		"body": [
+			"<Literal>",
+      "\t<ID>${1:id}</ID>",
+      "\t<ToolTip>${2:tooltip}</ToolTip>",
+      "\t<Default>${3:value}</Default>",
+      "</Literal>"
+		],
+		"description": "Creates a new literal for SSMS T-SQL snippet body"
+	}
+}
