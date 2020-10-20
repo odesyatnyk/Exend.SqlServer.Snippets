@@ -5,7 +5,7 @@ This repository contains set of some useful frequently used T-SQL statements tha
 ## Available Snippets
 - DDL
     - Create Table
-    - Foraign Key
+    - Foreign Key
 - DML
     - Select All
 
