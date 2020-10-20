@@ -39,17 +39,17 @@
       "</CodeSnippets>"
     ],
     "description": "Creates a new SSMS T-SQL snippet body"
-	},
-	"new-literal": {
-		"scope": "xml",
-		"prefix": "new-literal",
-		"body": [
-			"<Literal>",
+  },
+  "new-literal": {
+  "scope": "xml",
+  "prefix": "new-literal",
+  "body": [
+      "<Literal>",
       "\t<ID>${1:id}</ID>",
       "\t<ToolTip>${2:tooltip}</ToolTip>",
       "\t<Default>${3:value}</Default>",
       "</Literal>"
-		],
-		"description": "Creates a new literal for SSMS T-SQL snippet body"
-	}
+    ],
+    "description": "Creates a new literal for SSMS T-SQL snippet body"
+  }
 }
