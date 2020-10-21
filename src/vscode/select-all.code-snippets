@@ -5,6 +5,6 @@
     "body": [
       "SELECT * from ${1:TABLE1}"
     ],
-    "description": "T-SQL snippet to SELECT *"
+    "description": "SELECT * snippet"
   }
 }

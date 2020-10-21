@@ -1,0 +1,13 @@
+{
+  "drop-temp": {
+    "scope": "sql",
+    "prefix": "drop-temp",
+    "body": [
+      "IF OBJECT_ID('tempdb..#${1:table}') IS NOT NULL",
+      "  BEGIN",
+      "    DROP TABLE #${1:table}",
+      "  END"
+    ],
+    "description": "Drops temporary table if it exists"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "create-table": {
+    "scope": "sql",
+    "prefix": "create-table",
+    "body": [
+      "CREATE TABLE ${1:dbo}.${2:table1}",
+      "(",
+      "  ${3:idTable} ${4:INT NOT NULL} ${5:IDENTITY(1, 1)},",
+      "  CONSTRAINT PK_${2:table1} PRIMARY KEY CLUSTERED",
+      "  (",
+      "    ${3:idTable} ASC",
+      "  )",
+      ")",
+      "GO"
+    ],
+    "description": "Creates new table"
+  }
+}

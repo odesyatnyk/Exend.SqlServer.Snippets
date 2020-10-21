@@ -1,0 +1,15 @@
+{
+  "foreign-key": {
+    "scope": "sql",
+    "prefix": "foreign-key",
+    "body": [
+      "ALTER TABLE ${1:dbo}.${2:table1} WITH CHECK ADD CONSTRAINT FK_${2:table1}_${3:idColumn}_To_${4:table2} FOREIGN KEY (${3:idColumn})",
+      "REFERENCES ${5:dbo}.${4:table2} (${6:idColumn})",
+      "GO",
+      "",
+      "ALTER TABLE ${1:dbo}.${2:table1} CHECK CONSTRAINT FK_${2:table1}_${3:idColumn}_To_${4:table2}",
+      "GO"
+    ],
+    "description": "Creates new Foreign Key"
+  }
+}

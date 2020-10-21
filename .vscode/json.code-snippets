@@ -9,7 +9,7 @@
       "    \"body\": [",
       "      \"${3:SELECT NULL}\"",
       "    ],",
-      "    \"description\": \"T-SQL snippet to ${2:description}\"",
+      "    \"description\": \"${2:description}\"",
       "  }",
       "}"
     ],
