@@ -14,7 +14,7 @@
       "\t</_locDefinition>",
       "\t<CodeSnippet Format=\"1.0.0\">",
       "\t\t<Header>",
-      "\t\t<Title>$TM_FILENAME_BASE</Title>",
+      "\t\t<Title>${TM_FILENAME/^([^.]+).*/$1/}</Title>",
       "\t\t<Shortcut></Shortcut>",
       "\t\t<Description>${2:description}</Description>",
       "\t\t<Author>Oleksandr Desiatnyk</Author>",
