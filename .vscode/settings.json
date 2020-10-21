@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.snippet": "xml",
+    "*.code-snippets": "json"
+  }
+}
