@@ -1,0 +1,10 @@
+{
+  "select-all": {
+    "scope": "sql",
+    "prefix": "select-all",
+    "body": [
+      "SELECT * from ${1:TABLE1}"
+    ],
+    "description": "T-SQL snippet to SELECT *"
+  }
+}

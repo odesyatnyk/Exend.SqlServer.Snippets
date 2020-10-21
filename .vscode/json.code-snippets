@@ -1,0 +1,18 @@
+{
+  "sql-new-snippet": {
+    "scope": "json",
+    "prefix": "sql-new-snippet",
+    "body": ["{",
+      "  \"$TM_FILENAME_BASE\": {",
+      "    \"scope\": \"sql\",",
+      "    \"prefix\": \"$TM_FILENAME_BASE\",",
+      "    \"body\": [",
+      "      \"${3:SELECT NULL}\"",
+      "    ],",
+      "    \"description\": \"T-SQL snippet to ${2:description}\"",
+      "  }",
+      "}"
+    ],
+    "description": "Creates a new VS Code T-SQL snippet body"
+  }
+}
