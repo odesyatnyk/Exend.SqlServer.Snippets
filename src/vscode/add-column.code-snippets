@@ -1,0 +1,11 @@
+{
+  "add-column": {
+    "scope": "sql",
+    "prefix": "add-column",
+    "body": [
+      "ALTER TABLE ${1:dbo}.${2:table1}",
+      "ADD ${2:col} ${3:INT} ${4:NULL}"
+    ],
+    "description": "Adds new column to table"
+  }
+}

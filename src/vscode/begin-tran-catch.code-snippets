@@ -1,0 +1,18 @@
+{
+  "begin-tran-catch": {
+    "scope": "sql",
+    "prefix": "begin-tran-catch",
+    "body": [
+      "BEGIN TRANSACTION",
+      "  BEGIN TRY",
+      "    ",
+      "COMMIT",
+      "  END TRY",
+      "  BEGIN CATCH",
+      "    ROLLBACK",
+      "    {1:PRINT ERROR_MESSAGE()}",
+      "  END CATCH"
+    ],
+    "description": "description"
+  }
+}

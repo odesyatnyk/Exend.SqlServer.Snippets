@@ -10,10 +10,12 @@ This repository contains set of some useful frequently used T-SQL statements tha
 
 ## Available Snippets
 - DDL
+    - Add Column
     - Create Table
     - Drop Temp
     - Foreign Key
 - DML
+    - Begin Tran Catch
     - Select All
 
 ## Creating Your Own Snippets
