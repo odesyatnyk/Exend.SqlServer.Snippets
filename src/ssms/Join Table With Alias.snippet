@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone" />
+    <_locTag _loc="locData">Title</_locTag>
+    <_locTag _loc="locData">Description</_locTag>
+    <_locTag _loc="locData">Author</_locTag>
+    <_locTag _loc="locData">ToolTip</_locTag>
+  </_locDefinition>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+    <Title>Join Table With Alias</Title>
+    <Shortcut></Shortcut>
+    <Description>Joins a table to dataset using table aliases</Description>
+    <Author>Oleksandr Desiatnyk</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Join type</ToolTip>
+          <Default>INNER</Default>
+        </Literal>
+        <Literal>
+          <ID>schema1</ID>
+          <ToolTip>Outer table schema</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>table1</ID>
+          <ToolTip>Outer table name</ToolTip>
+          <Default>table1</Default>
+        </Literal>
+        <Literal>
+          <ID>alias1</ID>
+          <ToolTip>Outer table alias</ToolTip>
+          <Default>tb1</Default>
+        </Literal>
+        <Literal>
+          <ID>column</ID>
+          <ToolTip>Key column for join predicate</ToolTip>
+          <Default>idColumn</Default>
+        </Literal>
+        <Literal>
+          <ID>alias2</ID>
+          <ToolTip>Inner table alias</ToolTip>
+          <Default>tb2</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL">
+        <![CDATA[$type$ JOIN $schema1$.$table1$ AS $alias1$ ON $alias1$.$column$ = $alias2$.$column$
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

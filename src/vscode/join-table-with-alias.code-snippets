@@ -1,0 +1,10 @@
+{
+  "join-table-with-alias": {
+    "scope": "sql",
+    "prefix": "join-table-with-alias",
+    "body": [
+      "${1:INNER} JOIN ${2:dbo}.${3:table1} AS ${4:tb1} ON ${4:tb1}.${5:idColumn} = ${6:tb2}.${5:idColumn}"
+    ],
+    "description": "Joins a table to dataset using table aliases"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "add-column-not-null": {
+    "scope": "sql",
+    "prefix": "add-column-not-null",
+    "body": [
+      "ALTER TABLE ${1:dbo}.${2:table1}",
+      "ADD ${3:colname} ${4:INT} NULL",
+      "GO",
+      "",
+      "UPDATE ${1:dbo}.${2:table1}",
+      "SET ${1:dbo}.${2:table1}.${3:colname} = ${5:1}",
+      "FROM ${1:dbo}.${2:table1}",
+      "GO",
+      "",
+      "ALTER TABLE ${1:dbo}.${2:table1}",
+      "ALTER COLUMN ${3:colname} ${4:INT} NOT NULL",
+      "GO"
+    ],
+    "description": "Adds new not null column to table and populates it with value"
+  }
+}

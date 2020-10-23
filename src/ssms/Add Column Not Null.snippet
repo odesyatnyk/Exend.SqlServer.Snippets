@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone" />
+    <_locTag _loc="locData">Title</_locTag>
+    <_locTag _loc="locData">Description</_locTag>
+    <_locTag _loc="locData">Author</_locTag>
+    <_locTag _loc="locData">ToolTip</_locTag>
+  </_locDefinition>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+    <Title>Add Column Not Null</Title>
+    <Shortcut></Shortcut>
+    <Description>Adds new not null column to table and populates it with value</Description>
+    <Author>Oleksandr Desiatnyk</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>schema</ID>
+          <ToolTip>Table schema</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>table</ID>
+          <ToolTip>Table name</ToolTip>
+          <Default>table1</Default>
+        </Literal>
+        <Literal>
+          <ID>colname</ID>
+          <ToolTip>Column name</ToolTip>
+          <Default>colname</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Column datatype</ToolTip>
+          <Default>INT</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Column value</ToolTip>
+          <Default>1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL">
+        <![CDATA[ALTER TABLE $schema$.$table$
+ADD $colname$ $type$ NULL
+GO
+
+UPDATE $schema$.$table$
+SET $schema$.$table$.$colname$ = $value$
+FROM $schema$.$table$
+GO
+
+ALTER TABLE $schema$.$table$
+ALTER COLUMN $colname$ $type$ NOT NULL
+GO
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

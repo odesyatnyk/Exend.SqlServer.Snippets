@@ -1,0 +1,10 @@
+{
+  "join-table": {
+    "scope": "sql",
+    "prefix": "join-table",
+    "body": [
+      "${1:INNER} JOIN ${2:dbo}.${3:table1} ON ${2:dbo}.${3:table1}.${4:idColumn} = ${5:dbo}.${6:table2}.${4:idColumn}"
+    ],
+    "description": "Joins a table to dataset"
+  }
+}

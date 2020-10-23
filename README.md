@@ -10,10 +10,13 @@ This repository contains set of some useful frequently used T-SQL statements tha
 
 ## Available Snippets
 - DDL
+    - Add Column Not Null
     - Add Column
     - Create Table
     - Drop Temp
     - Foreign Key
+    - Join Table With Alias
+    - Join Table
 - DML
     - Begin Tran Catch
     - Select All
