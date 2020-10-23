@@ -10,7 +10,7 @@
       "  END TRY",
       "  BEGIN CATCH",
       "    ROLLBACK",
-      "    {1:PRINT ERROR_MESSAGE()}",
+      "    ${1:PRINT ERROR_MESSAGE()}",
       "  END CATCH"
     ],
     "description": "description"
