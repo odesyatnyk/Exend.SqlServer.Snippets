@@ -25,4 +25,5 @@ This repository contains set of some useful frequently used T-SQL statements tha
 TBD
 
 ## Installation
-TBD
+- Manual - TBD
+- Bundled into extension - TBD
